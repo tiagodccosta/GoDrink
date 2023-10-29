@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPage">
+
+    <ImageView
+        android:id="@+id/LogoPLACEHOLDER"
+        android:layout_width="258dp"
+        android:layout_height="207dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red_bar_icon_icons_com_59494" />
+
+    <TextView
+        android:id="@+id/welcomePLACEHOLDER"
+        android:layout_width="387dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:text="welcome, {nome user}"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogoPLACEHOLDER" />
+
+    <TextView
+        android:id="@+id/startPLACEHOLDER"
+        android:layout_width="343dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="203dp"
+        android:gravity="center"
+        android:text="{nome user}, let's choose what you looking for"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartChooser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomePLACEHOLDER" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStartChooser"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginStart="52dp"
+        android:background="#FF7214"
+        android:text="Start Chooser"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogOUT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogOUT"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="76dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginStart="52dp"
+        android:background="#FF7214"
+        android:text="Log Out"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

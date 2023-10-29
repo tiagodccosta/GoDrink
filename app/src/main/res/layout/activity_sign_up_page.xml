@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpPage">
+
+    <EditText
+        android:id="@+id/nameFieldInput"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="53dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHint="#FF7214"
+        app:layout_constraintBottom_toTopOf="@+id/emailFieldInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/emailFieldInput"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="53dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHint="#FF7214"
+        app:layout_constraintBottom_toTopOf="@+id/passFieldInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passFieldInput"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="172dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="53dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#FF7214"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/registerPLACEHOLDER"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="148dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="100dp"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nameFieldInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="149dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginStart="52dp"
+        android:background="#FF7214"
+        android:text="REGISTER"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
