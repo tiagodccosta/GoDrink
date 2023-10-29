@@ -1,0 +1,3 @@
+# GoDrinkApp
+
+Nesta UC iremos realizar uma Aplicação Mobile em conjunto com todas as outras UCs deste semestre. A aplicação não tem quaisquer limitações em termos do que podemos fazer. Tivemos a ideia de criar uma aplicação que use a localização do utilizador para recomendar locais de interesse para sair á noite ou ter atividades de lazer com amigos e familia, ie. bares, discotecas, cafés com esplanada, bares karaoke... E estes locais vão ser recomendados consoante a proximidade da localização do utilizador e as preferências que o utilizador insira na aplicação. Se ele quiser encontrar bares de Karaoke perto de si basta colocar que quer procurar bares de karaoke, dizer o seu "range" de distância até onde procurar e a aplicação fará o resto
