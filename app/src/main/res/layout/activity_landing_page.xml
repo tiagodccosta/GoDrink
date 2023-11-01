@@ -14,7 +14,6 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/red_bar_icon_icons_com_59494" />

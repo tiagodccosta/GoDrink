@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ChooserPage">
+
+    <ScrollView
+        android:id="@+id/placesToChooseScrollView"
+        android:layout_width="392dp"
+        android:layout_height="426dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choosePLACEHOLDER">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/barEsplanadaOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Bars with terrace"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/karaokeBarOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Karaoke Bars"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/irishPubsOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Irish Pubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rooftopOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="RoofTops"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uncoveredNightclubOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="uncovered nightclubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/technoNightclubOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="techno nightclubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/latinNightclubOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="latin nightclubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/happyhourOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="happy Hour bars"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/funkNightclubOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Funk Nightclubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shotsbarOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Shots Bars"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gayNightclubOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="gay nightclubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/popularClubsOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="Popular Clubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/afterpartyOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:padding="20dp"
+                android:text="after party clubs"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <SeekBar
+        android:id="@+id/rangeBar"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="109dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="17dp"
+        android:max="40"
+        android:progress="10"
+        android:progressTint="#FF7214"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:thumbTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeBarPLACEHOLDER" />
+
+    <TextView
+        android:id="@+id/rangeBarPLACEHOLDER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="183dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="28dp"
+        android:text="Range of Search:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preferencesPLACEHOLDER" />
+
+    <TextView
+        android:id="@+id/preferencesPLACEHOLDER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="33dp"
+        android:text="Preferences"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FF7214"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rangeIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="146dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="204dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/choosePLACEHOLDER"
+        android:layout_width="367dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="76dp"
+        android:text="Choose 3 to 5 places you would like to go out"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FF7214"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeBar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFinnishChooser"
+        android:layout_width="275dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="23dp"
+        android:background="#FF7214"
+        android:text="Finnish"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placesToChooseScrollView"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
