@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/placesToChooseScrollView"
-        android:layout_width="392dp"
-        android:layout_height="426dp"
+        android:layout_width="412dp"
+        android:layout_height="548dp"
         android:layout_marginTop="24dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -192,6 +194,14 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFinnishChooser"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#000000"
+                android:text="Finnish"
+                android:textColor="#FF7214" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -226,7 +236,6 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preferencesPLACEHOLDER" />
 
@@ -277,23 +286,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rangeBar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnFinnishChooser"
-        android:layout_width="275dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="23dp"
-        android:background="#FF7214"
-        android:text="Finnish"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/placesToChooseScrollView"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
