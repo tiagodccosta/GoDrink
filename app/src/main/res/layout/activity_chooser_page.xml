@@ -9,20 +9,15 @@
 
     <ScrollView
         android:id="@+id/placesToChooseScrollView"
-        android:layout_width="412dp"
-        android:layout_height="548dp"
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
         android:layout_marginTop="24dp"
         android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choosePLACEHOLDER">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -30,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="Bars with terrace"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -43,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="Karaoke Bars"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -56,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="Irish Pubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -69,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="RoofTops"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -82,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="uncovered nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -95,21 +90,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="techno nightclubs"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/latinNightclubOption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:padding="20dp"
-                android:text="latin nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -121,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="happy Hour bars"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -134,34 +116,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="Funk Nightclubs"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/shotsbarOption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:padding="20dp"
-                android:text="Shots Bars"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/gayNightclubOption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:padding="20dp"
-                android:text="gay nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -173,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="Popular Clubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
@@ -186,21 +142,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:text="after party clubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
                 android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnFinnishChooser"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#000000"
-                android:text="Finnish"
-                android:textColor="#FF7214" />
 
         </LinearLayout>
     </ScrollView>
