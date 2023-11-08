@@ -13,10 +13,11 @@
         android:theme="@style/Theme.GoDrink"
         tools:targetApi="31">
         <activity
+            android:name=".recommendedPage"
+            android:exported="false" />
+        <activity
             android:name=".ChooserPage"
-            android:exported="false">
-        </activity>
-        
+            android:exported="false"></activity>
         <activity
             android:name=".LandingPage"
             android:exported="false" />
