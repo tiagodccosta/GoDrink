@@ -1,72 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/background"
     tools:context=".LandingPage">
 
-    <ImageView
-        android:id="@+id/LogoPLACEHOLDER"
-        android:layout_width="258dp"
-        android:layout_height="207dp"
-        android:layout_marginEnd="77dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/red_bar_icon_icons_com_59494" />
-
     <TextView
-        android:id="@+id/welcomePLACEHOLDER"
-        android:layout_width="387dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:text="welcome, {nome user}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GO DRINK"
+        android:id="@+id/goDrinkPLACEHOLDER"
+        android:layout_marginTop="80dp"
+        android:textSize="50sp"
         android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LogoPLACEHOLDER" />
+        android:textColor="@color/white"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnStartChooser"
-        android:layout_width="305dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginStart="52dp"
-        android:background="#FF7214"
-        android:text="Start Chooser"
-        android:textColor="#000000"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogOUT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogOUT"
-        android:layout_width="305dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="76dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginStart="52dp"
-        android:background="#FF7214"
-        android:text="Log Out"
-        android:textColor="#000000"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp"
+        android:background="@drawable/custom_edit_text">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome Tiago Costa"
+                android:id="@+id/welcomePLACEHOLDER"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/background"/>
+
+            <Button
+                android:id="@+id/btnStartChooser"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/background"
+                android:text="Start Chooser"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+            <Button
+                android:id="@+id/btnBackToPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/background"
+                android:text="Preferences"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+            <Button
+                android:id="@+id/btnLogOut"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/background"
+                android:text="Log Out"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
