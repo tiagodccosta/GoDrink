@@ -1,23 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".ChooserPage">
 
-    <ScrollView
-        android:id="@+id/placesToChooseScrollView"
+    <TextView
+        android:id="@+id/goDrinkPLACEHOLDER"
         android:layout_width="match_parent"
-        android:layout_height="508dp"
-        android:layout_marginTop="24dp"
-        android:background="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/choosePLACEHOLDER">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/preferences"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_edit_text"
+        android:orientation="vertical"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <SeekBar
+                android:id="@+id/rangeBar"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:max="40"
+                android:min="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:progress="7"
+                android:progressTint="@color/background"
+                android:scaleX="2"
+                android:scaleY="2.2"
+                android:thumbTint="@color/black" />
+
+            <TextView
+                android:id="@+id/rangeBarPLACEHOLDER"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/range_of_search"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rangeIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/errorPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_edit_text"
+        android:orientation="vertical"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/errorPlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="only choose up to 3 spots!"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FF0000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOkError"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#FF0000"
+                android:text="Ok"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/choosePLACEHOLDER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/choose_up_to_3_places_you_would_like_to_go_out"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/placesToChooseScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutChooserPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
@@ -26,12 +170,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="Bars with terrace"
+                android:text="@string/bars_with_terrace"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/karaokeBarOption"
@@ -39,12 +184,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="Karaoke Bars"
+                android:text="@string/karaoke_bars"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/irishPubsOption"
@@ -52,12 +198,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="Irish Pubs"
+                android:text="@string/irish_pubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/rooftopOption"
@@ -65,12 +212,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="RoofTops"
+                android:text="@string/rooftops"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/uncoveredNightclubOption"
@@ -78,12 +226,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="uncovered nightclubs"
+                android:text="@string/uncovered_nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/technoNightclubOption"
@@ -91,12 +240,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="techno nightclubs"
+                android:text="@string/techno_nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/happyhourOption"
@@ -104,12 +254,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="happy Hour bars"
+                android:text="@string/happy_hour_bars"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/funkNightclubOption"
@@ -117,12 +268,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="Funk Nightclubs"
+                android:text="@string/funk_nightclubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/popularClubsOption"
@@ -130,12 +282,13 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="Popular Clubs"
+                android:text="@string/popular_clubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
 
             <TextView
                 android:id="@+id/afterpartyOption"
@@ -143,96 +296,43 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:padding="15dp"
-                android:text="after party clubs"
+                android:text="@string/after_party_clubs"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="changeColorIfSelected"/>
+
+            <Button
+                android:id="@+id/btnFinnishChooser"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/background"
+                android:text="@string/lets_go_drink"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btnGoBack"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/background"
+                android:text="@string/back"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
     </ScrollView>
-
-    <SeekBar
-        android:id="@+id/rangeBar"
-        android:layout_width="193dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="109dp"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="17dp"
-        android:max="40"
-        android:progress="10"
-        android:progressTint="#FF7214"
-        android:scaleX="2"
-        android:scaleY="2"
-        android:thumbTint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rangeBarPLACEHOLDER" />
-
-    <TextView
-        android:id="@+id/rangeBarPLACEHOLDER"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="183dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="28dp"
-        android:text="Range of Search:"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preferencesPLACEHOLDER" />
-
-    <TextView
-        android:id="@+id/preferencesPLACEHOLDER"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="55dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="33dp"
-        android:text="Preferences"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#FF7214"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/rangeIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="146dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="204dp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/choosePLACEHOLDER"
-        android:layout_width="367dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="76dp"
-        android:text="Choose 3 to 5 places you would like to go out"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#FF7214"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rangeBar" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

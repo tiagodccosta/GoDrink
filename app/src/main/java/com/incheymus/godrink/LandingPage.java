@@ -19,7 +19,8 @@ public class LandingPage extends AppCompatActivity {
         setContentView(R.layout.activity_landing_page);
 
         btnLogOut = (Button) findViewById(R.id.btnLogOUT);
-        btnStartChooser = (Button) findViewById(R.id.btnStartChooser);
+        btnStartChooser = (Button) findViewById(R.id.btnStart);
+
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">GoDrink</string>
+    <string name="irish_pubs">Irish Pubs</string>
+    <string name="rooftops">RoofTops</string>
+    <string name="uncovered_nightclubs">uncovered nightclubs</string>
+    <string name="techno_nightclubs">techno nightclubs</string>
+    <string name="happy_hour_bars">happy Hour bars</string>
+    <string name="funk_nightclubs">Funk Nightclubs</string>
+    <string name="popular_clubs">Popular Clubs</string>
+    <string name="after_party_clubs">after party clubs</string>
+    <string name="range_of_search">Range of Search:</string>
+    <string name="preferences">Preferences</string>
+    <string name="choose_3_to_5_places_you_would_like_to_go_out">Choose 3 to 5 places you would like to go out</string>
+    <string name="done">DONE</string>
+    <string name="start_chooser">Start Chooser</string>
+    <string name="back">Back</string>
+    <string name="log_out">Log out</string>
+    <string name="bars_with_terrace">Bars with terrace</string>
+    <string name="karaoke_bars">Karaoke Bars</string>
+    <string name="choose_the_places_you_would_like_to_go_out">choose the places you would like to go out</string>
+    <string name="choose_up_to_3_places_you_would_like_to_go_out">Choose up to 3 places you would like to go out</string>
+    <string name="lets_go_drink">Lets Go Drink</string>
+    <string name="what_we_found_for_you">What we found for you</string>
+    <string name="showing_results_for_this_preferences">Showing results for this Preferences</string>
+    <string name="showing_results_for_this_preferences2">Showing results for this preferences:</string>
+    <string name="rua_marco_delgado_n_12">Rua Marco Delgado Nº12</string>
+    <string name="distance_from_you_7km">Distance from you: 7KM</string>
+    <string name="harbour_afterparty_club">Harbour: Afterparty Club</string>
+    <string name="rating">Rating</string>
+    <string name="distance_from_you_13km">Distance from you: 13Km</string>
+    <string name="rua_jeronimo_grato_3">Rua Jeronimo Grato 3</string>
+    <string name="karaoke_bar_da_matilde">Karaoke Bar da Matilde</string>
 </resources>

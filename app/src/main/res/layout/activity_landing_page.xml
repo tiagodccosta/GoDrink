@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         app:cardCornerRadius="30dp"
@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome Tiago Costa"
+                android:text="Welcome, Tiago Costa"
                 android:id="@+id/welcomePLACEHOLDER"
                 android:textSize="22sp"
                 android:layout_margin="10dp"
@@ -53,33 +53,23 @@
                 android:textColor="@color/background"/>
 
             <Button
-                android:id="@+id/btnStartChooser"
+                android:id="@+id/btnStart"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="@color/background"
-                android:text="Start Chooser"
+                android:text="@string/start_chooser"
                 android:layout_marginTop="20dp"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
+            
             <Button
-                android:id="@+id/btnBackToPreferences"
+                android:id="@+id/btnLogOUT"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="@color/background"
-                android:text="Preferences"
-                android:layout_marginTop="20dp"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:cornerRadius="20dp" />
-            <Button
-                android:id="@+id/btnLogOut"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:backgroundTint="@color/background"
-                android:text="Log Out"
+                android:text="@string/log_out"
                 android:layout_marginTop="20dp"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
