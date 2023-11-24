@@ -28,9 +28,7 @@ public class ChooserPage extends AppCompatActivity {
             "Uncovered Nightclubs", "Techno Nightclubs", "Funk Nightclubs"
             ,"HappyHour Bars", "Popular Nightclubs", "After Party Nightclubs"};
 
-    private String[] userPreferences;
     private boolean isSelected = false;
-    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
