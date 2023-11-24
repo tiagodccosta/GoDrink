@@ -12,12 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoDrink"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDTQlfPzkXYC1hLD0pYDyMzirbTnP98j3w" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
-            android:name=".mapViewPage"
+            android:name=".PreferencesListView"
             android:exported="false" />
+
         <activity
             android:name=".ChooserPage"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".RecommendedPage"
             android:exported="false" />
@@ -36,6 +46,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>

@@ -203,7 +203,7 @@
                                     android:id="@+id/addressPLACEHOLDER"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/rua_marco_delgado_n_12"
+                                    android:text="@string/harbour_music_shelter_cais_g_s_lisboa"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/black"
@@ -271,6 +271,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewKaraokeBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -313,7 +314,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:orientation="vertical"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="5dp"
                             android:layout_marginEnd="20dp">
 
                             <LinearLayout
@@ -326,7 +327,7 @@
                                     android:id="@+id/namePLACEHOLDER2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/karaoke_bar_da_matilde"
+                                    android:text="@string/cheers_irish_pub_karaoke_bar"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/black"
@@ -353,7 +354,7 @@
                                     android:id="@+id/addressPLACEHOLDER2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/rua_jeronimo_grato_3"
+                                    android:text="@string/rua_da_atalaia_126_lisboa"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/black"

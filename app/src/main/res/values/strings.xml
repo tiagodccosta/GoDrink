@@ -30,4 +30,11 @@
     <string name="distance_from_you_13km">Distance from you: 13Km</string>
     <string name="rua_jeronimo_grato_3">Rua Jeronimo Grato 3</string>
     <string name="karaoke_bar_da_matilde">Karaoke Bar da Matilde</string>
+    <string name="preference">preference</string>
+    <string name="only_choose_up_to_3_spots">only choose up to 3 spots!</string>
+    <string name="cais_g_s_armazem_a_porta_7">Cais Gás Armazem A, Porta 7</string>
+    <string name="harbour_music_shelter_cais_g_s_lisboa">Harbour Music Shelter, Cais Gás, Lisboa</string>
+    <string name="cheers_irish_pub">Cheers Irish Pub</string>
+    <string name="cheers_irish_pub_karaoke_bar">cheers irish pub karaoke bar</string>
+    <string name="rua_da_atalaia_126_lisboa">Rua da Atalaia 126, Lisboa</string>
 </resources>
