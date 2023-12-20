@@ -7,7 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +31,7 @@ public class SignUpPage extends AppCompatActivity {
     private EditText passwordInput;
 
     private String name;
+    private Boolean success = false;
 
 
     @Override
@@ -46,10 +58,42 @@ public class SignUpPage extends AppCompatActivity {
                             "At least 9 letters");
                     passwordInput.requestFocus();
                 } else {
+                    registerUser();
                     startActivity(new Intent(SignUpPage.this, LoginPage.class));
                 }
             }
         });
+    }
+
+    public void registerUser() {
+        RequestQueue queue = Volley.newRequestQueue(SignUpPage.this);
+        String LOCALHOST = "http://10.0.2.2:8080/api/users/register";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOCALHOST, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(response.equalsIgnoreCase("success")) {
+                    nameInput.setText(null);
+                    emailInput.setText(null);
+                    passwordInput.setText(null);
+                    Toast.makeText(SignUpPage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(SignUpPage.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("user_name", nameInput.getText().toString());
+                params.put("user_email", emailInput.getText().toString());
+                params.put("password", passwordInput.getText().toString());
+                return params;
+            }
+        };
+        queue.add(stringRequest);
     }
 
 

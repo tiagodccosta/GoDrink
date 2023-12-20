@@ -90,57 +90,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/errorPopUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/custom_edit_text"
-            android:orientation="vertical"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="40dp"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/white">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="6dp">
-
-                <TextView
-                    android:id="@+id/errorPlaceHolder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/only_choose_up_to_3_spots"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#FF0000"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/btnOkError"
-                    android:layout_width="220dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="50dp"
-                    android:backgroundTint="#FF0000"
-                    android:text="Ok"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    app:cornerRadius="20dp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
         <TextView
             android:id="@+id/choosePLACEHOLDER"
             android:layout_width="match_parent"
@@ -159,10 +108,11 @@
         <ListView
             android:id="@+id/preferencesListView"
             android:layout_width="match_parent"
-            android:layout_height="650dp"
+            android:layout_height="643dp"
             android:background="@color/white"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:divider="@color/white">
         </ListView>
 
         <Button
