@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LandingPage extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        String user_name = getIntent().getStringExtra("user_name");
+        String user_name = getIntent().getStringExtra("userName");
 
         btnLogOut = (Button) findViewById(R.id.btnLogOUT);
         btnStartChooser = (Button) findViewById(R.id.btnStart);
@@ -31,6 +32,7 @@ public class LandingPage extends AppCompatActivity {
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(LandingPage.this, "You are Logged Out", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(LandingPage.this, LoginPage.class));
             }
         });

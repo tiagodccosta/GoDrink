@@ -10,9 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.NetworkError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.ServerError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -30,7 +32,7 @@ public class LoginPage extends AppCompatActivity {
     private Button btnLogin;
     private EditText emailInput;
     private EditText passwordInput;
-    private String user_name;
+    private String nameOfUserLoggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,6 @@ public class LoginPage extends AppCompatActivity {
                     passwordInput.setError("Invalid Password!\n" + "At least 9 letters");
                 } else {
                     loginUser();
-                    Intent intent = new Intent(LoginPage.this, LandingPage.class);
-                    intent.putExtra("user_name", user_name);
-                    startActivity(intent);
                 }
             }
         });
@@ -80,7 +79,12 @@ public class LoginPage extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            user_name = (String) response.get("user_name");
+                            String nameLoggedIn = (String) response.get("userName");
+                            nameOfUserLoggedIn = nameLoggedIn;
+                            Intent intent = new Intent(LoginPage.this, LandingPage.class);
+                            intent.putExtra("userName", nameOfUserLoggedIn);
+                            startActivity(intent);
+                            Toast.makeText(LoginPage.this, "User Logged In", Toast.LENGTH_LONG).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
                             System.out.println(e.getMessage());
@@ -89,9 +93,15 @@ public class LoginPage extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                if (error instanceof NetworkError) {
+                    Toast.makeText(LoginPage.this, "Network Error", Toast.LENGTH_LONG).show();
+                } else if (error instanceof ServerError) {
+                    Toast.makeText(LoginPage.this, "Server Error: " + error.networkResponse.statusCode, Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginPage.this, "Error: " + error.getMessage(), Toast.LENGTH_LONG).show();
+                }
                 error.printStackTrace();
-                System.out.println(error.getMessage());
-                Toast.makeText(LoginPage.this, "Login Failed", Toast.LENGTH_LONG);
+                Toast.makeText(LoginPage.this, "Login Failed", Toast.LENGTH_LONG).show();
             }
         });
         queue.add(jsonObjectRequest);

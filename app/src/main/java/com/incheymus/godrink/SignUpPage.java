@@ -76,13 +76,13 @@ public class SignUpPage extends AppCompatActivity {
                     nameInput.setText(null);
                     emailInput.setText(null);
                     passwordInput.setText(null);
-                    Toast.makeText(SignUpPage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpPage.this, "Registration Successful", Toast.LENGTH_LONG).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(SignUpPage.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUpPage.this, "Registration Unsuccessful", Toast.LENGTH_LONG).show();
             }
         }){
             protected Map<String, String> getParams() throws AuthFailureError {
