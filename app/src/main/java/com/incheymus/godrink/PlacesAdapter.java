@@ -61,6 +61,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView placeName;
         TextView placeAddress;
+        TextView placeType;
         ImageView placeImage;
 
         public ViewHolder(View itemView) {
@@ -78,6 +79,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
 
             placeImage = itemView.findViewById(R.id.placeImage);
             placeName = itemView.findViewById(R.id.namePLACEHOLDER);
+            placeType = itemView.findViewById(R.id.typePLACEHOLDER);
             placeAddress = itemView.findViewById(R.id.addressPLACEHOLDER);
         }
     }
@@ -95,6 +97,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
 
         holder.placeName.setText(place.getPlaceName());
         holder.placeAddress.setText(place.getPlaceAddress());
+        holder.placeType.setText(place.getPlace_type());
 
         byte[] placeImage = place.getPlaceImage();
 

@@ -59,12 +59,14 @@ public class PlaceApi {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
 
             // Check if the required fields are present in the JSON response
-            if (jsonObject.has("placeName") && jsonObject.has("placeAddress") && jsonObject.has("placeImage")) {
+            if (jsonObject.has("placeName") && jsonObject.has("placeAddress")
+                    && jsonObject.has("placeImage") && jsonObject.has("type")) {
                 String name = jsonObject.getString("placeName");
                 String address = jsonObject.getString("placeAddress");
+                String type = jsonObject.getString("type");
                 byte[] imageBytes = Base64.decode(jsonObject.getString("placeImage"), android.util.Base64.DEFAULT);
 
-                Place place = new Place(imageBytes, name, address);
+                Place place = new Place(imageBytes, name, address, type);
                 places.add(place);
             } else {
                 Log.e("PlaceApi", "Missing required fields for item at index " + i);

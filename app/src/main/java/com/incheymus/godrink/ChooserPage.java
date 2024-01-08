@@ -89,7 +89,7 @@ public class ChooserPage extends AppCompatActivity {
                 intent.putStringArrayListExtra("selectedList", selectedList);
                 intent.putExtra("range", rangeSelected);
 
-                if(selectedList.size() > 3 || selectedList.size() == 0) {
+                if(selectedList.size() > 3 || selectedList.size() == 0 || rangeSelected == 0) {
                     showErrorPopUp();
                 } else {
                     startActivity(intent);

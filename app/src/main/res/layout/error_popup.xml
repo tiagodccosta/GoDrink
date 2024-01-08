@@ -38,11 +38,23 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/rangeNotSelectedError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Don't forget to select a range of search"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/btnOkError"
                 android:layout_width="220dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#FF0000"
                 android:text="Ok"
