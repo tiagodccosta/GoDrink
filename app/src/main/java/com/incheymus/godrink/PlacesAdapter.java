@@ -104,7 +104,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         // Use Picasso to load and display the image
         if (placeImage != null && placeImage.length > 0) {
             Bitmap bitmap = BitmapFactory.decodeByteArray(placeImage, 0, placeImage.length);
-            holder.placeImage.setImageBitmap(bitmap);
+        holder.placeImage.setImageBitmap(bitmap);
         } else {
             // Handle the case when the image is not available
             holder.placeImage.setImageResource(R.drawable.afterparty);

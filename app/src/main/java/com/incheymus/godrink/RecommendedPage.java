@@ -16,8 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.libraries.places.api.model.Place;
+
 
 public class RecommendedPage extends AppCompatActivity {
 
@@ -33,12 +32,14 @@ public class RecommendedPage extends AppCompatActivity {
     String apiKey;
     private static final String TAG = "101";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommended_page);
 
         apiKey = getString(R.string.API_KEY);
+        Log.d(TAG, apiKey);
 
         selectedPreferences = getIntent().getStringArrayListExtra("selectedList");
         rangeSelected = getIntent().getIntExtra("range", 15);
@@ -108,7 +109,6 @@ public class RecommendedPage extends AppCompatActivity {
                     adapter.removeDuplicatePlaces(places);
                     adapter.notifyDataSetChanged();
                 }
-
                 @Override
                 public void onError(String message) {
                     // Handle error

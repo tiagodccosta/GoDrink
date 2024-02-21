@@ -18,6 +18,10 @@ android {
         multiDexEnabled = true
     }
 
+    buildFeatures {
+        buildConfig = true // Enable the buildConfig feature
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -25,6 +29,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "API_KEY", "\"" + System.getenv("API_KEY") + "\"")
+            resValue("string", "google_maps_key", "\"" + System.getenv("API_KEY") + "\"")
         }
     }
     compileOptions {
@@ -39,7 +45,7 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
-    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.google.android.gms:play-services-location:21.1.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.android.volley:volley:1.2.1")
     implementation ("com.google.android.libraries.places:places:3.3.0")
