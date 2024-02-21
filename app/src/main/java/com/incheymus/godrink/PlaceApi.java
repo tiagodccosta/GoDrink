@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlaceApi {
-    private static final String BASE_URL = "http://10.0.2.2:8080/api/places/";
+    private static final String BASE_URL = "http://10.0.2.2:2599/api/places/";
 
     private final Context context;
     private final RequestQueue requestQueue;

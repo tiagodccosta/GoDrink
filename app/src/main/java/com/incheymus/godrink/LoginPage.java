@@ -68,7 +68,7 @@ public class LoginPage extends AppCompatActivity {
 
     public void loginUser() {
         RequestQueue queue = Volley.newRequestQueue(LoginPage.this);
-        String LOCALHOST = "http://10.0.2.2:8080/api/users/login";
+        String LOCALHOST = "http://10.0.2.2:2599/api/users/login";
 
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("email", emailInput.getText().toString());

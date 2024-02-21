@@ -67,7 +67,7 @@ public class SignUpPage extends AppCompatActivity {
 
     public void registerUser() {
         RequestQueue queue = Volley.newRequestQueue(SignUpPage.this);
-        String LOCALHOST = "http://10.0.2.2:8080/api/users/register";
+        String LOCALHOST = "http://10.0.2.2:2599/api/users/register";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOCALHOST, new Response.Listener<String>() {
             @Override
