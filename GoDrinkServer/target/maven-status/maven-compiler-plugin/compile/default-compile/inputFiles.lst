@@ -1,5 +1,8 @@
 /Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Controllers/UsersController.java
 /Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/Exceptions/NotFoundException.java
+/Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/Repositories/PlaceRepository.java
+/Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Controllers/PlacesController.java
+/Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/Place.java
 /Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/Login.java
 /Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/Repositories/UserRepository.java
 /Users/tiagodccosta/Desktop/GoDrinkServer/src/main/java/com/tiagocosta/GoDrink/Models/User.java
