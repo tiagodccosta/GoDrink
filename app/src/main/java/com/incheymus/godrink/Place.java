@@ -8,6 +8,7 @@ public class Place {
 
     private byte[] place_image;
     private String place_name, place_address, place_type;
+    private double distanceFromUser;
 
     public Place(byte[] place_image, String place_name, String place_address, String place_type) {
         this.place_image = place_image;
@@ -29,4 +30,12 @@ public class Place {
     }
 
     public String getPlace_type() { return  place_type; }
+
+    public double getDistanceFromUser() {
+        return distanceFromUser;
+    }
+
+    public void setDistanceFromUser(double distanceFromUser) {
+        this.distanceFromUser = distanceFromUser;
+    }
 }

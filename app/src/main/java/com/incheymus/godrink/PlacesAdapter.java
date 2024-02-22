@@ -1,5 +1,6 @@
 package com.incheymus.godrink;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import androidx.annotation.NonNull;
@@ -32,6 +34,10 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
     public PlacesAdapter(Context context, List<Place> places) {
         this.context = context;
         this.places = places;
+    }
+
+    public void clearPlaces() {
+        places.clear();
     }
 
     public void removeDuplicatePlaces(List<Place> newPlaces) {
@@ -63,6 +69,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         TextView placeAddress;
         TextView placeType;
         ImageView placeImage;
+        TextView distanceFromUser;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -81,6 +88,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
             placeName = itemView.findViewById(R.id.namePLACEHOLDER);
             placeType = itemView.findViewById(R.id.typePLACEHOLDER);
             placeAddress = itemView.findViewById(R.id.addressPLACEHOLDER);
+            distanceFromUser = itemView.findViewById(R.id.distancePLACEHOLDER);
         }
     }
 
@@ -91,6 +99,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Place place = places.get(position);
@@ -98,15 +107,14 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         holder.placeName.setText(place.getPlaceName());
         holder.placeAddress.setText(place.getPlaceAddress());
         holder.placeType.setText(place.getPlace_type());
+        holder.distanceFromUser.setText("Distance: " + String.format(Locale.getDefault(), "%.2f km", place.getDistanceFromUser()));
 
         byte[] placeImage = place.getPlaceImage();
 
-        // Use Picasso to load and display the image
         if (placeImage != null && placeImage.length > 0) {
             Bitmap bitmap = BitmapFactory.decodeByteArray(placeImage, 0, placeImage.length);
         holder.placeImage.setImageBitmap(bitmap);
         } else {
-            // Handle the case when the image is not available
             holder.placeImage.setImageResource(R.drawable.afterparty);
         }
     }
